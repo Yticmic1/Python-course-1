@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Проверка ответа</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 20px;
+			text-align: center;
+		}
+
+		#answer-input {
+			width: 70%;
+			height: 100px;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+
+		#result {
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		button {
+			padding: 10px;
+			background-color: #4caf50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+	<link rel="icon" type="image/png" sizes="64x64" href="img/Python.png" />
+</head>
+<body>
+	<button><a href="Urok1.html" class="butka">&#9664;Назад</a></button><h1>Проверка ответа</h1>
+
+	<textarea id="answer-input" placeholder="Введите ваш ответ"></textarea>
+	<br>
+	<button onclick="checkAnswer()">Проверить</button>
+
+	<div id="result"></div>
+
+	<script>
+		function checkAnswer() {
+			var userAnswer = document.getElementById('answer-input').value.toLowerCase(); // приводим ответ пользователя к нижнему регистру
+			var correctAnswer = "a a a"; // замените это на правильный ответ, также в нижнем регистре
+
+			if (userAnswer === correctAnswer) {
+				document.getElementById('result').innerHTML = "Ответ верный!";
+			} else {
+				document.getElementById('result').innerHTML = "Ответ неверный. Попробуйте еще раз.";
+			}
+		}
+	</script>
+	<div id="footer">2023 &copy; Сделано by Yticmic <a href="https://www.donationalerts.com/r/yticmic1" target="_blank">Поддержка меня ₽</a></div>
+</body>
+</html>
